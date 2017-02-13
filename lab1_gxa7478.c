@@ -1,6 +1,16 @@
+//  compile-command in Omega:
+//      gcc -o program lab1_gxa7478.c
+//  Run-program command:
+//      ./program < filename.txt
+//  example:
+//    
+//       I saved test inputs (separately)
+//       in text files and used shell redirect
+//       like this:
 //
-//  maxInterleaveFactor.c
-//  
+//           ./program < lab1a.c
+//           ./program < lab1b.c
+//           ./program < lab1c.c
 //
 //  Created by graciela aguilar on 2/11/17.
 //
@@ -22,6 +32,7 @@ int main (int argc, char *argv[]){
     char buffer[256];
     int i = 0, j = -1, maxFactor = 0;
     char *tok;
+    bool result;
 
     
     while(fgets(buffer, sizeof(buffer) , stdin) != NULL){
@@ -55,6 +66,13 @@ int main (int argc, char *argv[]){
             j++;
         }
         
+    }
+    result = maxInterleaveFactor(1);
+    
+    if(!result){
+        
+        printf("Subsequence does not exist.\nExiting...\n");
+        exit(0);
     }
     maxFactor = binarysearch(A_size/X_size);
     
