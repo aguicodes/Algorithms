@@ -135,5 +135,7 @@ int binarysearch(int factor){
         
         }
     }
+    free(A);
+    free(X);
     return 0;
 }
