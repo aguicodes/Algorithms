@@ -1,8 +1,0 @@
-Parent: P
-
-Left child: 2P
-
-Right Child: 2P + 1
-
-
-(in indexes) 
