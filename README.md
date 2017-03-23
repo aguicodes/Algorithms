@@ -1,2 +1,2 @@
 # Algorithms
-Dynamic Programming, optimization 
+Dynamic Programming, Optimization 
